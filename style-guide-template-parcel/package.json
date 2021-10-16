@@ -12,12 +12,10 @@
   },
   "author": "Shane T",
   "license": "GPL-2.0",
+  "type": "module",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "parcel": "*",
     "rimraf": "^3.0.2"
-  },
-  "dependencies": {
-    "parcel-bundler": "^1.12.5"
   }
 }
