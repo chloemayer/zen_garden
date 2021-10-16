@@ -1,14 +1,21 @@
-@import 'partials/reset';
-@import 'partials/prefix-mixins';
-@import 'partials/layout'; // responsive grid and media queries
+@import "partials/reset";
+@import "partials/prefix-mixins";
+@import "partials/layout"; // responsive grid and media queries
 
 // color palette - these colors will be the color swatches of the Colors section
+<<<<<<< HEAD
 // additional colors
 @import 'partials/colors';
+=======
+
+@import "partials/colors";
+
+// additional colors
+>>>>>>> fd14e145b419e7e4511a5c647002a17f6a8a653c
 
 // fonts
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+$primary-font: "Merriweather", serif;
+$secondary-font: "Open Sans", sans-serif;
 
 /* -------------------------------- 
 
@@ -42,86 +49,6 @@ xNavigation
 
 -------------------------------- */
 
-header {
-  background-color: $color-2;
-}
-
-.cd-logo {
-  /* logo box style */
-  background-color: $color-1;
-  width: 120px;
-
-  @include MQ(M) {
-    width: 180px;
-  }
-}
-
-.cd-main-nav {
-  /* main navigation background color - full screen on small devices */
-  background: $color-2;
-
-  li a {
-    color: $color-5;
-    border-color: lighten($color-2, 5%);
-  }
-
-  @include MQ(M) {
-    li a {
-      color: lighten($color-2, 40%);
-
-      &.selected {
-        color: $color-5;
-        box-shadow: 0 2px 0 $color-1;
-      }
-
-      &:hover {
-        color: $color-5;
-      }
-    }
-  }
-}
-
-.cd-nav-trigger span {
-  /* hamburger menu */
-  background-color: $color-5;
-
-  &::before,
-  &::after {
-    /* upper and lower lines */
-    background-color: $color-5;
-  }
-}
-
-.nav-is-visible .cd-nav-trigger span {
-  /* hide line in the center on mobile when nav is visible */
-  background-color: rgba($color-5, 0);
-
-  &::before,
-  &::after {
-    /* preserve visibility of upper and lower lines - close icon */
-    background-color: rgba($color-5, 1);
-  }
-}
-
-.cd-download {
-  /* download button top-right visible on big devices */
-  background-color: lighten($color-2, 10%);
-
-  .no-touch &:hover {
-    background-color: lighten($color-2, 15%);
-  }
-
-  span {
-    /* tooltip */
-    background: $color-1;
-    color: $color-5;
-
-    &::before {
-      /* right arrow color */
-      border-color: $color-1;
-    }
-  }
-}
 
 /* -------------------------------- 
 
@@ -228,7 +155,7 @@ xForm
 
 -------------------------------- */
 
-input[type='text'],
+input[type="text"],
 select {
   border: 1px solid $color-4;
   border-radius: 0.25em;
@@ -239,7 +166,7 @@ select {
   }
 }
 
-input[type='text'] {
+input[type="text"] {
   padding: 0.6em 1em;
   box-shadow: inset 1px 1px rgba(#000, 0.03);
 
@@ -259,8 +186,8 @@ input[type='text'] {
   }
 }
 
-input[type='radio'],
-input[type='checkbox'] {
+input[type="radio"],
+input[type="checkbox"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -277,7 +204,7 @@ input[type='checkbox'] {
   &::before,
   &::after {
     /* custom radio and check boxes */
-    content: '';
+    content: "";
     display: block;
     width: 16px;
     height: 16px;
@@ -294,7 +221,7 @@ input[type='checkbox'] {
 
   &::after {
     left: 3px;
-    background: url('../assets/form/icon-check.svg') no-repeat center center;
+    background: url("../assets/form/icon-check.svg") no-repeat center center;
     display: none;
   }
 }
@@ -307,21 +234,21 @@ input[type='checkbox'] {
   border-radius: 3px;
 }
 
-input[type='radio']:checked + label::before,
-input[type='checkbox']:checked + label::before {
+input[type="radio"]:checked + label::before,
+input[type="checkbox"]:checked + label::before {
   background-color: $color-2;
   border: none;
   box-shadow: none;
 }
 
-input[type='radio']:checked + label::after,
-input[type='checkbox']:checked + label::after {
+input[type="radio"]:checked + label::after,
+input[type="checkbox"]:checked + label::after {
   display: block;
 }
 
 .cd-select::after {
   /* switcher arrow for select element */
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   right: 14px;
@@ -330,7 +257,7 @@ input[type='checkbox']:checked + label::after {
   display: block;
   width: 16px;
   height: 16px;
-  background: url('../assets/form/icon-select.svg') no-repeat center center;
+  background: url("../assets/form/icon-select.svg") no-repeat center center;
   pointer-events: none;
 }
 
@@ -341,4 +268,4 @@ select {
   @include appearance(none);
 }
 
-@import 'partials/basic-style';
+@import "partials/basic-style";
